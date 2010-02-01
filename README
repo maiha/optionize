@@ -1,0 +1,52 @@
+Optionize
+=========
+
+  argument helper
+
+
+Usage
+=====
+
+  Optionize can extract args with various formats like this.
+
+    user("maiha", 14)
+    user(:name => 'maiha', :age => 14)
+    user("maiha", :age => 14)
+
+
+  In this case, we define 'user' method as following
+
+    require 'optionize'
+    def user(*args)
+      opts = Optionize.new(args, :name, :age)
+      opts[:name] # => "maiha"
+      opts.name   # => "maiha"
+      opts[:age]  # => 14
+
+
+Extensions
+==========
+
+  Extend Array class to respond to optionize method 
+
+    require 'optionize/array'
+    opts = ['maiha'].optionize(:name, :age)
+    opts.name # => 'maiha'
+    opts.age  # => nil
+
+Install
+=======
+
+  gem install optionize
+
+
+Homepage
+========
+
+  git://github.com/maiha/optionize.git
+
+
+Author
+======
+  Maiha <maiha@wota.jp>
+
