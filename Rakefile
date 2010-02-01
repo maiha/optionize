@@ -6,7 +6,7 @@ AUTHOR = "maiha"
 EMAIL = "maiha@wota.jp"
 HOMEPAGE = "http://github.com/maiha/optionize"
 SUMMARY = "method argument utils"
-GEM_VERSION = "0.1.0"
+GEM_VERSION = "0.1.1"
 
 spec = Gem::Specification.new do |s|
   s.rubyforge_project = 'asakusarb'

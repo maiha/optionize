@@ -22,6 +22,10 @@ class Optionize
     end
   end
 
+  def to_hash
+    @hash
+  end
+
   def [](key)
     @hash[key.to_s]
   end

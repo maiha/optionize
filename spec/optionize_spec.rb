@@ -99,4 +99,16 @@ describe Optionize do
     its("age" ) { should == 16 }
   end
 
+  ######################################################################
+  ### misc
+
+  describe "functional test" do
+    it "should work with 'default' option" do
+      # NOTE: to distinct with Hash#default
+      args = [:foo, []]
+      opts = Optionize.new(args, :name, :default)
+      opts.name.should == :foo
+      opts.default.should == []
+    end
+  end
 end
